@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="content section">
+    <h2>Welcome to My Portfolio</h2>
+    <p class="intro">
+      I'm <strong>Akmalovich</strong>, a frontend developer with a passion for timeless design and elegant code.
+      Explore my work, skills, and journey — crafted with precision and purpose.
+    </p>
+    <div class="home-cards">
+      <div class="card">
+        <h3>Projects</h3>
+        <p>See my latest web creations and design experiments.</p>
+        <a href="Explore.html">Explore</a>
+      </div>
+      <div class="card">
+        <h3>Skills</h3>
+        <p>Discover the tools and technologies I master.</p>
+        <a href="Skills.html">View Skills</a>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</html>

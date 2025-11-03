@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akmalovich Portfolio</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="bosh">
+    <div class="sarlavha">
+      <h1>Akmalovich Portfolio</h1>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Profile Image -->
+<div class="profile section">
+  <img src="profile.jpg" alt="Akmalovich" class="profile-img" />
+</div>
+
+<!-- About Section -->
+<div class="content section">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate web developer with a love for clean design and elegant code.
+    My goal is to build responsive and user-friendly websites that leave a lasting impression.
+  </p>
+</div>
+
+<!-- Projects Section -->
+<div class="projects section">
+  <h2>My Projects</h2>
+  <div class="project-card">
+    <h3>Project One</h3>
+    <p>Brief description of the first project.</p>
+    <a href="ProjectOne.html">View Project One</a>
+  </div>
+  <div class="project-card">
+    <h3>Project Two</h3>
+    <p>Brief description of the second project.</p>
+    <a href="ProjectTwo.html">View Project Two</a>
+  </div>
+</div>
+
+<!-- Skills Section -->
+<div class="skills section">
+  <h2>Skills</h2>
+  <ul>
+    <li>HTML & CSS</li>
+    <li>JavaScript</li>
+    <li>Responsive Design</li>
+    <li>Git & GitHub</li>
+  </ul>
+</div>
+
+<!-- Social Links -->
+<div class="social section">
+  <a href="https://github.com/akmalovich" target="_blank">GitHub</a>
+  <a href="https://linkedin.com/in/akmalovich" target="_blank">LinkedIn</a>
+</div>
+<!-- Testimonials Section -->
+<div class="testimonials section">
+  <h2>Testimonials</h2>
+  <blockquote>
+    <p>"Akmalovich is a brilliant developer. His attention to detail is unmatched."</p>
+    <footer>— John Smith, CEO of WebWorks</footer>
+  </blockquote>
+</div>
+
+<!-- Timeline Section -->
+<div class="timeline section">
+  <h2>Experience</h2>
+  <ul>
+    <li><strong>2023–2025:</strong> Frontend Developer at TechVision</li>
+    <li><strong>2021–2023:</strong> Web Design Intern at PixelCraft</li>
+  </ul>
+</div>
+
+<!-- Resume Download Section -->
+<div class="resume section">
+  <h2>Resume</h2>
+  <a href="Akmalovich-Resume.pdf" download target="_blank">
+  ⬇️ Download My Resume (PDF)
+</a>
+</div>
+
+<!-- Contact Form Section -->
+<div class="contact-form section">
+  <h2>Send Me a Message</h2>
+  <form action="mailto:your@email.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<!-- Certifications Section -->
+<div class="certifications section">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Google UX Design Certificate (2024)</li>
+    <li>Meta Front-End Developer Certificate (2023)</li>
+  </ul>
+</div>
+<!-- Footer -->
+<div class="footer section">
+  <p>&copy; 2025 Akmalovich. All rights reserved.</p>
+</div>
+
+</body>
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  sections.forEach(section => observer.observe(section));
+
+
+   const profile = document.querySelector('.profile');
+  const profileImg = document.querySelector('.profile-img');
+
+  profileImg.addEventListener('click', () => {
+    profileImg.classList.toggle('enlarged');
+    profile.classList.toggle('enlarged');
+  });
+
+</script>
+</html>

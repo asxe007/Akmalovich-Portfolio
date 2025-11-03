@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="contact-form section">
+    <h2>Contact Me</h2>
+    <p>If you'd like to collaborate or just say hello, feel free to reach out.</p>
+    <form action="mailto:your@email.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-social">
+      <a href="https://github.com/akmalovich" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/akmalovich" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</body>
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</html>

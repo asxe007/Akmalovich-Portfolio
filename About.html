@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="content section">
+    <h2>About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I specialize in building responsive, accessible, and visually refined websites.
+          My approach blends classic design principles with modern technologies.
+        </p>
+        <p>
+          With a background in design and development, I focus on creating digital experiences that feel intuitive and elegant.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="about-photo.jpg" alt="Akmalovich working" />
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</html>

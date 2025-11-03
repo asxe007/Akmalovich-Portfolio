@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills - Akmalovich</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+  <div class="skills section">
+    <h2>My Skills</h2>
+    <ul>
+      <li><strong>HTML & CSS:</strong> Semantic markup, Flexbox, Grid, responsive layouts</li>
+      <li><strong>JavaScript:</strong> DOM manipulation, ES6+, API integration, animations</li>
+      <li><strong>Frameworks:</strong> Bootstrap, Tailwind CSS, React (basic)</li>
+      <li><strong>Version Control:</strong> Git, GitHub, branching workflows</li>
+      <li><strong>Design Tools:</strong> Figma, Adobe XD, minimalist UI design</li>
+      <li><strong>Soft Skills:</strong> Communication, teamwork, time management</li>
+    </ul>
+  </div>
+</body>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</html>
